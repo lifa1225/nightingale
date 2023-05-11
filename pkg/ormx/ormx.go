@@ -30,10 +30,10 @@ func New(c DBConfig) (*gorm.DB, error) {
 	switch strings.ToLower(c.DBType) {
 	case "mysql":
 		dialector = mysql.Open(c.DSN)
-	case "sqlite":
-		dialector = sqlite.Open(c.DSN)
 	case "postgres":
 		dialector = postgres.Open(c.DSN)
+	case "sqlite":
+		dialector = sqlite.Open(c.DSN)
 	default:
 		return nil, fmt.Errorf("dialector(%s) not supported", c.DBType)
 	}

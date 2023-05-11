@@ -79,13 +79,13 @@ DefaultRoles = ["Standard"]
 
 [DB]
 # postgres: host=%s port=%s user=%s dbname=%s password=%s sslmode=%s
-#DSN="root:1234@tcp(127.0.0.1:3306)/n9e_v6?charset=utf8mb4&parseTime=True&loc=Local&allowNativePasswords=true"
-DSN="n9e_v6.db"
+DSN="root:1234@tcp(127.0.0.1:3306)/n9e_v6?charset=utf8mb4&parseTime=True&loc=Local&allowNativePasswords=true"
+#DSN="n9e_v6.db"
 # enable debug mode or not
 Debug = false
 # mysql postgres
-#DBType = "mysql"
-DBType = "sqlite"
+DBType = "mysql"
+#DBType = "sqlite"
 # unit: s
 MaxLifetime = 7200
 # max open connections
