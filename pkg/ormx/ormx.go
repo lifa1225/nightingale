@@ -7,6 +7,7 @@ import (
 
 	"gorm.io/driver/mysql"
 	"gorm.io/driver/postgres"
+	"gorm.io/driver/sqlite"
 	"gorm.io/gorm"
 	"gorm.io/gorm/schema"
 )
@@ -29,6 +30,8 @@ func New(c DBConfig) (*gorm.DB, error) {
 	switch strings.ToLower(c.DBType) {
 	case "mysql":
 		dialector = mysql.Open(c.DSN)
+	case "sqlite":
+		dialector = sqlite.Open(c.DSN)
 	case "postgres":
 		dialector = postgres.Open(c.DSN)
 	default:

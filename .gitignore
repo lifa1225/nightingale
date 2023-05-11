@@ -55,3 +55,11 @@ queries.active
 
 /n9e-*
 n9e.sql
+
+/scripts
+/ssl
+/tools
+
+bingo_n9e
+bingo_n9e.spec
+n9e_v6.db
